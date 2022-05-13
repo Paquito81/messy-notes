@@ -1,0 +1,23 @@
+{
+  "name": "messy-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paquito81/messy-notes.git"
+  },
+  "keywords": [],
+  "author": "Hector Palacios <paquito1981@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Paquito81/messy-notes/issues"
+  },
+  "homepage": "https://github.com/Paquito81/messy-notes#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
