@@ -1,6 +1,14 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title":"Grocery shopping",
+        "text":"Go to store on monday."
+    },
+    {
+        "title":"Call parents",
+        "text":"Invite parents over for dinner."
+    },
+    {
+        "title":"Trash day",
+        "text":"Take out the trash."
     }
 ]
