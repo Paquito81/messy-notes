@@ -1,14 +1,17 @@
 const express = require('express');
 const app = express();
+const noteData = require('./db/db.json')
 const PORT = process.env.PORT || 3001;
 const {db} = require()
+app.use(express.json());
+app.use(express.static('public'));
 
 app.get('/api/db', req,res => {
     let results = db;
     if (req.query) {
-    results = filterByQuery(req.query, results);
+    results = filterByQuery(req.query,noteData);
     }
-    res.json(results);
+    res.json(noteData);
 });
 
 app.post('/api/db', (req, res) => {
@@ -19,8 +22,21 @@ app.post('/api/db', (req, res) => {
 
     } else {
         const note = createNewNote(req.body,db);
-        res.json(note);
+        res.json(noteData);
     }
+});
+
+
+app.get('/',(req, res) => {
+    res.sendFile(path.join(__dirname, 'develop/public/index.html'));
+});
+
+app.get('/db', (req, res) => {
+    res.sendFile(path.join(__dirname, 'develop/public/notes.html'));
+});
+
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname, 'develop/public/index.html'));
 });
 
 
