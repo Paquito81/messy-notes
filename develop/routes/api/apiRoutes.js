@@ -1,7 +1,7 @@
 const router = require ('express').Router();
-const { notes } = require('../../db/db')
+const { notes } = require('develop/db/db.json')
 //getting notes and sending them back as JSON
-router.get('/db', req,res => {
+router.get('/api/notes', req,res => {
     let results = db;
     if (req.query) {
     results = filterByQuery(req.query,noteData);
@@ -9,7 +9,7 @@ router.get('/db', req,res => {
     res.json(noteData);
 });
 //Creating a new note
-router.post('/db', (req, res) => {
+router.post('/api/notes', (req, res) => {
     req.body.id = db.length.tostring();
 
     if (!validateNote(req.body)) {
@@ -20,5 +20,11 @@ router.post('/db', (req, res) => {
         res.json(noteData);
     }
 });
+
+//Deleting notes
+// router.delete('/notes/:id', (req, res) => {
+//     res.json()
+
+// });
 
 module.exports = router;
