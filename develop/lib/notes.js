@@ -3,11 +3,13 @@ const path = ('path');
 
 function creatingNewNotes(body, notesArray) {
     const notes = body;
-    notesArray.push(note);
+    notesArray.push(notes);
     fs.writeFileSync(
         path.join(__dirname, 'develop/db/db.json'),
-        JSON.stringify({note:notesArray},null, 2)
+        JSON.stringify({note: notesArray},null, 2)
     );
 
     return notes;
 }
+
+module.exports = creatingNewNotes;

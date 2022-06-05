@@ -4,20 +4,20 @@ const { notes } = require('develop/db/db.json')
 router.get('/api/notes', req,res => {
     let results = db;
     if (req.query) {
-    results = filterByQuery(req.query,noteData);
+    results = filterByQuery(req.query,notes);
     }
     res.json(noteData);
 });
 //Creating a new note
 router.post('/api/notes', (req, res) => {
-    req.body.id = db.length.tostring();
+    req.body.id = db.length.toString();
 
     if (!validateNote(req.body)) {
        res.status(400).send('No note to add.');
 
     } else {
-        const note = createNewNote(req.body,db);
-        res.json(noteData);
+        const note = createNewNote(req.body, notes);
+        res.json(notes);
     }
 });
 

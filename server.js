@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const apiRoutes = require('./routes/api/apiRoutes');
-const htmlRoutes = require('./routes/html/htmlRoutes');
+const apiRoutes = require('../routes/api/apiRoutes.js');
+const htmlRoutes = require('../routes/html/htmlRoutes');
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
