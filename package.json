@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Paquito81/messy-notes#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "jest": "^28.1.0"
+    "jest": "^28.1.0",
+    "uniqid": "^5.4.0"
   }
 }
